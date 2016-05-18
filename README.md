@@ -300,13 +300,13 @@ partial name 'list_row', resource name 'todo', order of lookup:
 
  1. Sync.TodoListRow
  2. Sync.ListRow
- 3. Sync.View (Default fallback)
+ 3. RenderSync.View (Default fallback)
 
 
-For example, if you wanted to fade in/out a row in a sync'd todo list instead of the Sync.View default of instant insert/remove:
+For example, if you wanted to fade in/out a row in a sync'd todo list instead of the RenderSync.View default of instant insert/remove:
 
 ```coffeescript
-class Sync.TodoListRow extends Sync.View
+class Sync.TodoListRow extends RenderSync.View
 
   beforeInsert: ($el) ->
     $el.hide()
